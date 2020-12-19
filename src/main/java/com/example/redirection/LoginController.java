@@ -12,7 +12,7 @@ public class LoginController extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         if ("admin".equals(username) && "admin".equals(password)) {
-            request.setAttribute("username", username);
+            request.getSession().setAttribute("username", username);
             response.sendRedirect("admin");
         } else {
             response.sendRedirect("error.html");

@@ -9,6 +9,7 @@ import java.io.IOException;
 @WebServlet("/admin")
 public class Admin extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getSession().getAttribute("username");
         request.getRequestDispatcher("/adminPage.jsp").forward(request,response);
     }
 
