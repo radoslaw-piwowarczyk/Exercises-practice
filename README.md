@@ -1,9 +1,9 @@
-W ramach przykładu stwórzmy aplikację, w której na stronie głównej wyświetlimy formularz z jednym polem tekstowym na
-hasło. Formularz będzie wysłany pod adres /secret, które będzie obsługiwane przez serwlet, którego zadaniem będzie
-wyświetlenie tajnej wiadomości.
+It is an app to practice creating filters. On the main page there is a form with one text field for a password. Form will
+be sent to an address /secret, which will be operated on by a servlet. Purpose of the servlet is to display the secret
+message.
 
-Zdefiniujemy także dwa filtry:
+There will be 2 filters:
 
-AuthenticationFilter - będzie odpowiedzialny za weryfikację hasła z formularza. Jeżeli będzie ono inne niż "h@rdPass",
-to wyślemy w odpowiedzi kod 403 Forbidden, SecurityLoggingFilter - filtr, który będzie logował adresy IP i user-agenta
-każdego żądania, które będzie przetwarzane przez naszą aplikację.
+AuthenticationFilter - responsible for verification of the password sent through the form. If it were different from 
+"h@rdPass", then code 403 Forbidden will be sent. 
+SecurityLoggingFilter - filter to logg IP address and user-agent of every request.
