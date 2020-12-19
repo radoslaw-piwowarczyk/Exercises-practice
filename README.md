@@ -1,1 +1,2 @@
-This project was made to practice with creation of cookies.
+This project was made to practice with creation of cookies. This is an app which counts number of visits on the website.
+Every time user comes back to the site or refresh it the counter will be increased and information about number of visits will be saveed in the browser.
