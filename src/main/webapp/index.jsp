@@ -1,13 +1,21 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>JSP - Hello World</title>
+    <meta charset="UTF-8">
+    <title>Control centre - log in<</title>
 </head>
 <body>
-<h1><%= "Hello World!" %>
-</h1>
-<br/>
-<a href="hello-servlet">Hello Servlet</a>
+<h2>Log in</h2>
+<form action="<%=request.getContextPath() + "/login"%>" method="post">
+    <div>
+        <label for="username">Username</label>
+        <input name="username" id="username">
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input name="password" type="password" id="password">
+    </div>
+    <input type="submit" value="Log in">
+</form>
 </body>
 </html>
