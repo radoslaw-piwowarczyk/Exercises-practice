@@ -1,0 +1,1 @@
+This project was made to practice with creation of cookies.
