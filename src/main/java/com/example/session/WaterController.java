@@ -13,21 +13,21 @@ public class WaterController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String option = request.getParameter("option");
         HttpSession session = request.getSession();
-        if(option.equals("water")){
+        if (option.equals("water")) {
             increaseWaterLevel(session);
-        }else if (option.equals("clear")){
+        } else if (option.equals("clear")) {
             session.removeAttribute("water");
         }
-        request.getRequestDispatcher("/index.jsp").forward(request,response);
+        request.getRequestDispatcher("/index.jsp").forward(request, response);
     }
 
-    private void increaseWaterLevel(HttpSession session){
+    private void increaseWaterLevel(HttpSession session) {
         Object water = session.getAttribute("water");
         int resultWater;
-        if(water == null){
+        if (water == null) {
             resultWater = GLASS_OF_WATER;
         } else {
-            resultWater = ((int)water) + GLASS_OF_WATER;
+            resultWater = ((int) water) + GLASS_OF_WATER;
         }
         session.setAttribute("water", resultWater);
     }
