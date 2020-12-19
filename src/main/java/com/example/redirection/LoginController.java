@@ -13,9 +13,9 @@ public class LoginController extends HttpServlet {
         String password = request.getParameter("password");
         if ("admin".equals(username) && "admin".equals(password)) {
             request.setAttribute("username", username);
-            request.getRequestDispatcher("/adminPage.jsp").forward(request, response);
+            response.sendRedirect("admin");
         } else {
-            request.getRequestDispatcher("/error.html").forward(request, response);
+            response.sendRedirect("error.html");
         }
     }
 
